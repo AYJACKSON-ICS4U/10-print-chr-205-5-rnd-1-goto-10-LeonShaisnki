@@ -1,0 +1,26 @@
+var x=0;
+var y=0;
+var spacing=10;
+
+background (15, 11, 15);
+
+var draw= function() {
+    fill(random(255), random(255), random(255));
+    stroke(random(255), random(255), random(255));
+    strokeWeight(2);
+    if (random(1)<0.5){
+        line (x, y, x+spacing, y+spacing);
+    }else{
+        line(x, y+spacing, x+spacing, y);   
+    }
+    
+    y=y+spacing;
+    if (y>400)
+    {
+     y=0;
+     x=x+spacing;
+     ellipse(380, 380, 20, 20);
+    }
+    
+    
+};
